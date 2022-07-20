@@ -30,16 +30,22 @@ if(isPalindrome){
 
 
 //Write a function that prints all prime numbers (up to 100000).
-let isPrime = true;
-for(let i = 2; i <= 100; i++){
-    for(let j = 2; j < i - 1; j++){
-        if(i % j == 0){
-            isPrime = false;
-            break;
-        }
-    }
-    if(isPrime){
-        console.log(i);
-    }
-    isPrime = true;
-}
+// let isPrime = true;
+// for(let i = 2; i <= 100000; i++){
+//     for(let j = 2; j < i - 1; j++){
+//         if(i % j == 0){
+//             isPrime = false;
+//             break;
+//         }
+//     }
+//     if(isPrime){
+//         console.log(i);
+//     }
+//     isPrime = true;     
+// }                  ================> prints all the numbers!
+
+//Write a function that combines two lists by alternatingly taking elements, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+const array1 = ['a', 'b', 'c'];
+const array2 = [1, 2, 3];
+
+console.log(array1.map((elem, index) => [elem, array2[index]]).flat());
