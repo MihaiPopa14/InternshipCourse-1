@@ -1,1 +1,1 @@
-# InternshipCourse-1
+# InternshipCourse-1 - Solutions
