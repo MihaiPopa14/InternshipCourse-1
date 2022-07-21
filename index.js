@@ -49,3 +49,16 @@ const array1 = ['a', 'b', 'c'];
 const array2 = [1, 2, 3];
 
 console.log(array1.map((elem, index) => [elem, array2[index]]).flat());
+
+//Write a function that merges two sorted lists into a new sorted list. [1,4,6],[2,3,5] → [1,2,3,4,5,6].
+const arr1 = [4, 6, 2];
+const arr2 = [7, 5, 3];
+
+var result = arr1.sort((a,b) => a - b).concat(arr2.sort((a,b) => a - b));
+result.sort((a,b) => a - b );
+console.log(result);
+
+//Write a function that takes a number and returns a list of its digits. 2342 should return [2,3,4,2].
+const nr = 2315;
+const nrArray = Array.from(String(nr), Number);
+console.log(nrArray);
