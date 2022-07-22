@@ -35,7 +35,8 @@ const value = isPalindrome(string);
 console.log(value);
 
 
-//Write a function that prints all prime numbers (up to 100000).
+
+//Write a function that prints all prime numbers (up to 100000). ============ DE REFACUT CU ALGO - Ciurul lui Eratostene==============
 // let isPrime = true;
 // for(let i = 2; i <= 100000; i++){
 //     for(let j = 2; j < i - 1; j++){
