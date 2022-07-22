@@ -17,16 +17,22 @@ console.log(array.filter(x => x % 2 == 1));
 //?? TBD
 
 //Write a function that tests whether a string is a palindrome.
-const string = 'rotor';
-function isPalindrome(string){
-    return string === string.spit('').reverse().join(''); 
-}
-if(isPalindrome){
-    console.log( string, "is a palindrome");
 
-}else{
-    console.log(string, "is not a palindrome"); //to be fixed
+function isPalindrome(string){
+    
+    const len = string.length; //length of the string
+    for(let i = 0; i < len/2; i++){ // loop trough half of the word
+        if(string[i] !== string[len - 1 - i]){ // Checks if letter at the beginning of the word is the same as the letter at the end of it 
+            return "Not a palindrome!"         //  r o t o r
+        }else{                                 //  ^       ^
+            return "It is a palindrome"        //    ^   ^
+        }                                      //      ^
+    }
 }
+
+const string = 'rotor121';
+const value = isPalindrome(string);
+console.log(value);
 
 
 //Write a function that prints all prime numbers (up to 100000).
