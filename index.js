@@ -37,6 +37,7 @@ console.log(value);
 
 
 //Write a function that prints all prime numbers (up to 100000). ============ DE REFACUT CU ALGO - Ciurul lui Eratostene==============
+
 // let isPrime = true;
 // for(let i = 2; i <= 100000; i++){
 //     for(let j = 2; j < i - 1; j++){
@@ -50,6 +51,29 @@ console.log(value);
 //     }
 //     isPrime = true;     
 // }                  ================> prints all the numbers!
+
+function sieveOfEratosthenes(n){
+    //create a boolean array 
+    //initialize all values as true
+    //a value prime[i] will be false
+    //if is not prime, else true
+    prime = Array.from({length: n+1}, (_, i) => true);
+    for(j = 2; j*j <= n; j++){
+        if(prime[j] == true){
+            //update all multiples of j
+            for(i = j*j; i <= n; i += j)
+                prime[i] = false;
+        }
+    }
+    //Print the numbers
+    for(i = 2; i <= n; i++){
+        if(prime[i] == true)
+        console.log(i + ' ');
+    }
+}
+
+var n = 100//000;   It works!
+sieveOfEratosthenes(n);
 
 //Write a function that combines two lists by alternatingly taking elements, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
 const array1 = ['a', 'b', 'c'];
